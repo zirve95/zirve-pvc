@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zirve PVC & Alüminyum | Profesyonel Yapı Çözümleri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8fafc;
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        /* Logo Tasarımı */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+        }
+        .logo-main {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            position: relative;
+        }
+        .logo-main::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 1px;
+            background: #ddd;
+        }
+        .logo-sub {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.35em;
+            color: #666;
+            padding-top: 4px;
+            text-transform: uppercase;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+        }
+
+        .gallery-card {
+            overflow: hidden;
+            border-radius: 1.5rem;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.2);
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            backdrop-filter: blur(5px);
+            z-index: 10;
+        }
+
+        .filter-btn.active {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        /* WhatsApp Butonu Vurgusu */
+        .whatsapp-cta {
+            background-color: #25d366;
+            color: white;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .whatsapp-cta:hover {
+            background-color: #128c7e;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasyon -->
+    <nav class="glass-header fixed w-full z-[100] border-b border-slate-100">
+        <div class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
+            <a href="#" class="logo-container">
+                <span class="logo-main">ZİRVE</span>
+                <span class="logo-sub">PVC & ALÜMİNYUM</span>
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-10 text-[12px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#anasayfa" class="hover:text-black transition text-black">Anasayfa</a>
+                <a href="#galeri" class="hover:text-black transition">Uygulamalar</a>
+                <a href="https://wa.me/905511893821" target="_blank" class="whatsapp-cta px-8 py-3 rounded-full font-bold shadow-lg">
+                    <i class="fab fa-whatsapp"></i> Hemen Teklif Al
+                </a>
+            </div>
+
+            <button class="lg:hidden text-2xl text-slate-700"><i class="fas fa-bars-staggered"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Bölümü -->
+    <section id="anasayfa" class="hero-section flex items-center justify-center text-center text-white relative">
+        <div class="container mx-auto px-6 z-10" data-aos="fade-up">
+            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight uppercase">Zirve'de <br>Kalite Standart.</h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10">
+                Evinizin ve iş yerinizin çehresini modern, dayanıklı ve yüksek yalıtımlı sistemlerimizle değiştiriyoruz.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#galeri" class="bg-white text-black px-10 py-5 rounded-2xl font-bold hover:bg-slate-200 transition shadow-xl border-none">Kataloğu İncele</a>
+                <a href="https://wa.me/905511893821" target="_blank" class="whatsapp-cta px-10 py-5 rounded-2xl font-bold shadow-xl border-none">
+                    <i class="fab fa-whatsapp text-xl"></i> WhatsApp'tan Yazın
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Bölümü -->
+    <section id="galeri" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">Uygulama Örneklerimiz</h2>
+                <div class="flex flex-wrap justify-center gap-3 mb-12">
+                    <button class="filter-btn active px-6 py-2 border border-slate-200 rounded-full text-xs font-bold uppercase tracking-widest transition" onclick="filterGal('all', this)">Tümü</button>
+                    <button class="filter-btn px-6 py-2 border border-slate-200 rounded-full text-xs font-bold uppercase tracking-widest transition" onclick="filterGal('pvc', this)">PVC Sistemleri</button>
+                    <button class="filter-btn px-6 py-2 border border-slate-200 rounded-full text-xs font-bold uppercase tracking-widest transition" onclick="filterGal('balkon', this)">Cam Balkon</button>
+                    <button class="filter-btn px-6 py-2 border border-slate-200 rounded-full text-xs font-bold uppercase tracking-widest transition" onclick="filterGal('aluminyum', this)">Alüminyum</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="galeri-grid">
+                <!-- Ürün Kartı 1 -->
+                <div class="gallery-card gallery-item pvc" data-aos="fade-up">
+                    <span class="category-badge">PVC Sistemleri</span>
+                    <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="PVC Pencere">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2">Antrasit PVC Pencere</h4>
+                        <p class="text-sm text-slate-500 mb-4">Maksimum ısı ve ses yalıtımı sağlayan estetik çözümler.</p>
+                        <a href="https://wa.me/905511893821?text=Merhaba, Antrasit PVC Pencere hakkında bilgi almak istiyorum." target="_blank" class="text-green-600 font-bold text-sm flex items-center gap-2 hover:underline">
+                            <i class="fab fa-whatsapp"></i> Fiyat Sorun
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ürün Kartı 2 -->
+                <div class="gallery-card gallery-item balkon" data-aos="fade-up" data-aos-delay="100">
+                    <span class="category-badge">Cam Balkon</span>
+                    <img src="https://images.unsplash.com/photo-1595853035070-59a39fe84de3?auto=format&fit=crop&w=800&q=80" alt="Sürme Cam Balkon">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2">Sürme Cam Balkon</h4>
+                        <p class="text-sm text-slate-500 mb-4">Dört mevsim balkon keyfi sunan kolay kullanımlı sistemler.</p>
+                        <a href="https://wa.me/905511893821?text=Merhaba, Sürme Cam Balkon hakkında bilgi almak istiyorum." target="_blank" class="text-green-600 font-bold text-sm flex items-center gap-2 hover:underline">
+                            <i class="fab fa-whatsapp"></i> Fiyat Sorun
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ürün Kartı 3 -->
+                <div class="gallery-card gallery-item aluminyum" data-aos="fade-up" data-aos-delay="200">
+                    <span class="category-badge">Alüminyum</span>
+                    <img src="https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=800&q=80" alt="Alüminyum Doğrama">
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-2">Alüminyum Kapı & Cephe</h4>
+                        <p class="text-sm text-slate-500 mb-4">Modern mimari yapılar için yüksek dayanımlı alüminyum profiller.</p>
+                        <a href="https://wa.me/905511893821?text=Merhaba, Alüminyum sistemler hakkında bilgi almak istiyorum." target="_blank" class="text-green-600 font-bold text-sm flex items-center gap-2 hover:underline">
+                            <i class="fab fa-whatsapp"></i> Fiyat Sorun
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teklif Bölümü (WhatsApp Yönlendirmeli) -->
+    <section id="iletisim" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-100">
+                <div class="md:w-1/2 bg-black p-12 md:p-20 text-white">
+                    <div class="logo-container items-start mb-8">
+                        <span class="logo-main text-white">ZİRVE</span>
+                        <span class="logo-sub text-slate-400">PVC & ALÜMİNYUM</span>
+                    </div>
+                    <h3 class="text-4xl font-black mb-6 uppercase">Hemen Teklif Alın</h3>
+                    <p class="text-slate-400 text-lg mb-10 leading-relaxed">
+                        Ölçü almak ve fiyatlandırma yapmak için bize WhatsApp üzerinden ulaşın. Uzman ekibimiz en kısa sürede size dönüş yapacaktır.
+                    </p>
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-green-500 text-2xl">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest mb-1">WhatsApp Hattı</p>
+                                <a href="https://wa.me/905511893821" target="_blank" class="text-2xl font-bold hover:text-green-500 transition">0551 189 38 21</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-slate-900 flex items-center justify-center text-blue-500 text-2xl">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 uppercase font-bold tracking-widest mb-1">Adresimiz</p>
+                                <p class="text-lg font-bold">Merkez Sanayi Bölgesi, Bayburt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-12 md:p-20 flex flex-col justify-center items-center text-center">
+                    <div class="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-4xl mb-8">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4 class="text-3xl font-bold mb-6">Hızlı İletişim</h4>
+                    <p class="text-slate-500 mb-10 text-lg">Hemen uzman ekibimizle iletişime geçin.</p>
+                    <a href="https://wa.me/905511893821?text=Merhaba, ürünleriniz hakkında fiyat teklifi almak istiyorum." target="_blank" 
+                       class="whatsapp-cta w-full py-6 rounded-3xl font-black text-xl uppercase tracking-tighter shadow-2xl border-none">
+                        <i class="fab fa-whatsapp text-2xl"></i> WHATSAPP İLE TEKLİF AL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alt Bilgi (Footer) -->
+    <footer class="py-12 bg-white text-center border-t">
+        <div class="logo-container mb-6">
+            <span class="logo-main">ZİRVE</span>
+            <span class="logo-sub">PVC & ALÜMİNYUM</span>
+        </div>
+        <div class="text-[10px] text-slate-300 uppercase tracking-widest font-bold">© 2024 ZİRVE YAPI SİSTEMLERİ | MERKEZ SANAYİ BÖLGESİ - BAYBURT</div>
+    </footer>
+
+    <!-- Sabit WhatsApp Erişimi -->
+    <a href="https://wa.me/905511893821" target="_blank" class="fixed bottom-8 right-8 z-[200] bg-[#25d366] text-white w-20 h-20 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform animate-bounce border-none">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        function filterGal(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    setTimeout(() => item.style.opacity = '1', 50);
+                } else {
+                    item.style.opacity = '0';
+                    setTimeout(() => item.style.display = 'none', 300);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
